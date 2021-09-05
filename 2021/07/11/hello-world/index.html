@@ -443,31 +443,30 @@
 
 
 
-  <div id="giteement-ctn"></div>
+
   
-    <link rel="stylesheet" href="/lib/default.css">
-    <script src="/lib/giteement.browser.js"></script>
+  <div id="gitment-ctn"></div>
+  
+    <!-- 中文 -->
+    <link rel="stylesheet" href="/lib/gitment.css">
+    <script src="/lib/gitment.js"></script>
   
   <script>
-  <!-- id: "Hello World" -->
-  var giteement = new Giteement({
-    id: '20210711225928',
-    owner: 'Shuzhen Wu',
-    repo: 'Blog_comments',
-    backcall_uri: '',
-    oauth_uri: 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token',
-    oauth: {
-      client_id: 'c90bbf3e4fcbad82ace0475d2bd505e0122b5b9f742ce9dd062a1840c607586f',
-      client_secret: '39d1769a677ef1b65c59c78ae6d26b36c35dd16324db9fe78e3c314e6d9c1719'
-    },
-  })
-  giteement.render('giteement-ctn')
+    <!-- id: "Hello World" -->
+    var gitment = new Gitment({
+      id: "20210711225928",
+      owner: 'janewu66',
+      repo: 'Blog_comments',
+      oauth: {
+        client_id: 'eb4b433e6e369142247c',
+        client_secret: 'b962236174ed1689ff80868ae037d12362cbc4cd',
+      },
+    })
+    gitment.render('gitment-ctn')
   </script>
 
 
-
-
-
+  
 
 
 
