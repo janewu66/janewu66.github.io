@@ -244,28 +244,30 @@
   <div class="article-entry" itemprop="articleBody">
     
     <p>hexo部署插件：<code> npm install hexo-deployer-git --save</code></p>
-<h3 id="hexo部署到Gitee上"><a href="#hexo部署到Gitee上" class="headerlink" title="hexo部署到Gitee上"></a>hexo部署到Gitee上</h3><h4 id="查看是否有ssh-key"><a href="#查看是否有ssh-key" class="headerlink" title="查看是否有ssh key"></a>查看是否有ssh key</h4><p>1.打开git bash命令行，输入：<code>$ cd ~/.ssh</code>,如果显示no such file or directory,则是没有ssh key.</p>
+<h3 id="一、hexo部署到Gitee上"><a href="#一、hexo部署到Gitee上" class="headerlink" title="一、hexo部署到Gitee上"></a>一、hexo部署到Gitee上</h3><h4 id="查看是否有ssh-key"><a href="#查看是否有ssh-key" class="headerlink" title="查看是否有ssh key"></a>查看是否有ssh key</h4><p>1.打开git bash命令行，输入：<code>$ cd ~/.ssh</code>,如果显示no such file or directory,则是没有ssh key.</p>
 <p>如有，返回：</p>
 <p>$ cd ~/.ssh</p>
 <p>Administrator@PC-201708171647 MINGW64 ~/.ssh<br>$ ls<br>id_rsa  id_rsa.pub  known_hosts</p>
-<h4 id="将ssh-key添加到Gitee上"><a href="#将ssh-key添加到Gitee上" class="headerlink" title="将ssh key添加到Gitee上"></a>将ssh key添加到Gitee上</h4><p>上git bas输入’ $cat ~/.ssh/id_rsa.pub ‘</p>
-<p>Administrator@PC-201708171647 MINGW64 /<br>$ cat ~/.ssh/id_rsa.pub<br>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCxIN/YFK4Xy4SR9/Ge+DKeM/5Fmh8JMzMVJXZK0PsglhqwTmJw030dbQiS1swjlmbUlL2bY6ly18YI+KrVNORng8jUldhKEfcknSv9GGfvlJDUtT7T2rhCPN7zvuMhdQgoMPhlbaakNxe/5uWfB2MLww5VSZewg09/UhuiTwsykNhhDVEAO05gF1MXFs9YGiTZIPBpfEycq2/HuhbV76WT5bMbItTku0iaPx3n5arb4tIydXElG5eunYNehvdmGkLft5WYsHb0wNn6/bnUbrsqFdRn2LlU/e4sewYAhNw6iM2+EQcFiA8/chAcyyRJnOuMOw2BXWbGCTBElTaViKXYFi+AEXwuhfBTWma++N60/X9ZtN0x1QHQA6Rgw3oI+MptFB7CE+WnI+IbRPWVBh36TdJTW0ABOqAop2LWLWVw4Y4Bdh9TdJIIbWNBd+jtb3MtjiTIxSL3QwMxWIbzXSLkyc17kuOCW9RjcNBX5h6Gi3WwlNfWu6TPymzcW8X+7QE= <a href="mailto:&#x77;&#x75;&#x5f;&#x73;&#x68;&#117;&#x7a;&#104;&#x65;&#x6e;&#64;&#x66;&#111;&#120;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;">&#x77;&#x75;&#x5f;&#x73;&#x68;&#117;&#x7a;&#104;&#x65;&#x6e;&#64;&#x66;&#111;&#120;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#x6d;</a><br></p>
+<h4 id="将ssh-key添加到Gitee上"><a href="#将ssh-key添加到Gitee上" class="headerlink" title="将ssh key添加到Gitee上"></a>将ssh key添加到Gitee上</h4><p>上git bas输入：</p>
+<p>$cat ~/.ssh/id_rsa.pub </p>
+<p>Administrator@PC-201708171647 MINGW64 /<br>$ cat ~/.ssh/id_rsa.pub<br>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCxIN/YFK4Xy4SR9/Ge+DKeM/5Fmh8JMzMVJXZK0PsglhqwTmJw030dbQiS1swjlmbUlL2bY6ly18YI+KrVNORng8jUldhKEfcknSv9GGfvlJDUtT7T2rhCPN7zvuMhdQgoMPhlbaakNxe/5uWfB2MLww5VSZewg09/UhuiTwsykNhhDVEAO05gF1MXFs9YGiTZIPBpfEycq2/HuhbV76WT5bMbItTku0iaPx3n5arb4tIydXElG5eunYNehvdmGkLft5WYsHb0wNn6/bnUbrsqFdRn2LlU/e4sewYAhNw6iM2+EQcFiA8/chAcyyRJnOuMOw2BXWbGCTBElTaViKXYFi+AEXwuhfBTWma++N60/X9ZtN0x1QHQA6Rgw3oI+MptFB7CE+WnI+IbRPWVBh36TdJTW0ABOqAop2LWLWVw4Y4Bdh9TdJIIbWNBd+jtb3MtjiTIxSL3QwMxWIbzXSLkyc17kuOCW9RjcNBX5h6Gi3WwlNfWu6TPymzcW8X+7QE= <a href="mailto:&#x77;&#x75;&#95;&#x73;&#104;&#x75;&#x7a;&#104;&#x65;&#110;&#x40;&#x66;&#111;&#x78;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;">&#x77;&#x75;&#95;&#x73;&#104;&#x75;&#x7a;&#104;&#x65;&#110;&#x40;&#x66;&#111;&#x78;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;</a><br></p>
 <p>将返回的key添加到Gitee上：<br></p>
 <p>访问 <a target="_blank" rel="noopener" href="https://gitee.com/profile/sshkeys">SSH公钥 - Gitee.com</a> ,<br></p>
-<p>git bash 中输入; ‘ cat -T <a href="mailto:&#103;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#101;&#101;&#x2e;&#x63;&#111;&#109;">&#103;&#105;&#116;&#x40;&#103;&#x69;&#x74;&#101;&#101;&#x2e;&#x63;&#111;&#109;</a> ‘ <br></p>
-<h3 id="修改Config文件"><a href="#修改Config文件" class="headerlink" title="修改Config文件"></a>修改Config文件</h3><p>登录Gitee,新建一个仓库，如图：</p>
+<p>git bash 中输入; cat -T <a href="mailto:&#x67;&#105;&#116;&#x40;&#103;&#105;&#116;&#x65;&#101;&#x2e;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#116;&#x40;&#103;&#105;&#116;&#x65;&#101;&#x2e;&#x63;&#x6f;&#x6d;</a>  <br></p>
+<h4 id="修改Config文件"><a href="#修改Config文件" class="headerlink" title="修改Config文件"></a>修改Config文件</h4><p>登录Gitee,新建一个仓库，如图：</p>
 <p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210921171725025.png" alt="image-20210921171725025"></p>
 <p>在_config.yml文件中，做如下配置：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@gitee.com:shuzhen-wu/MyBlog.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 
-
-
+<p>在命令行输入：<code>hexo g -d</code>布署到Gitee上。</p>
+<h4 id="启动Gitee-page服务"><a href="#启动Gitee-page服务" class="headerlink" title="启动Gitee page服务"></a>启动Gitee page服务</h4><p>进入新建的仓库，选择“服务”-&gt;“Gitee Pages”-&gt;选中“强制使用HTTPS”-&gt;“启动”，然后Gitee Pages会返回一个网址，通用这个网址，就可以访问博客内容了。</p>
+<p>（注：首次使用Gitee Page需要实名认证）</p>
 <h3 id="hexo-如何发布博客文章："><a href="#hexo-如何发布博客文章：" class="headerlink" title="hexo 如何发布博客文章："></a>hexo 如何发布博客文章：<br></h3><p>1、<code>hexo clean</code>  </p>
 <p>2、<code>hexo generate</code></p>
 <p>3、在git bash中输入：<code>git config --global user.name &quot;Jane Wu&quot;</code> </p>
 <p>4、<code>hexo d</code></p>
 <p>拷贝主题（如yilia）：<br><code>git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</code> </p>
-<h3 id="yilia启用评论（Gitment）"><a href="#yilia启用评论（Gitment）" class="headerlink" title="yilia启用评论（Gitment）"></a>yilia启用评论（Gitment）<br></h3><h4 id="一、注册OAuth-Application"><a href="#一、注册OAuth-Application" class="headerlink" title="一、注册OAuth Application"></a>一、注册OAuth Application<br></h4>
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4>
     
 
     
